@@ -1,0 +1,54 @@
+{
+  "_from": "elfinder-material-theme",
+  "_id": "elfinder-material-theme@2.1.10",
+  "_inBundle": false,
+  "_integrity": "sha512-WE5MPrXQbrSmowAwwU76B9O9g3yy/kI5wAY7FXcLE0dqo9dG2D9q5U4Co+rNReScKEpf9w8Tivd4tbRwwv6CJA==",
+  "_location": "/elfinder-material-theme",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "elfinder-material-theme",
+    "name": "elfinder-material-theme",
+    "escapedName": "elfinder-material-theme",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/elfinder-material-theme/-/elfinder-material-theme-2.1.10.tgz",
+  "_shasum": "36b58e45d5555525c452b36831c56bde161af120",
+  "_spec": "elfinder-material-theme",
+  "_where": "D:\\C#\\MVC\\XuanThuLab",
+  "author": {
+    "name": "Róbert Kelčák {RobiNN}"
+  },
+  "bugs": {
+    "url": "https://github.com/RobiNN1/elFinder-Material-Theme/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Theme for elFinder",
+  "homepage": "https://github.com/RobiNN1/elFinder-Material-Theme#readme",
+  "keywords": [
+    "elFinder",
+    "Material",
+    "theme",
+    "material-theme",
+    "material-design"
+  ],
+  "license": "MIT",
+  "main": "Material/css/theme.css",
+  "name": "elfinder-material-theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobiNN1/elFinder-Material-Theme.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.1.10"
+}

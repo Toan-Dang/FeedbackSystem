@@ -1,0 +1,78 @@
+﻿@model IEnumerable<FS.Areas.Admin.Models.Assignment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int count = 1;
+}
+
+<h1>Index</h1>
+<head>
+    <link rel="stylesheet" href="~/css/searchbar/add.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" asp-action="Create">Create New</a>
+        <div class="search-container">
+            <form asp-action="">
+
+                <input id="search" type="text" placeholder="Search.." name="txtSearch" önkeyup="searchSuggest(event)">
+
+                <button type="submit" id="search" name="search" value="search"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NO.</th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Class)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Module)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegistrationCode)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model) {
+                <tr>
+                    <td>
+                        @count
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Module.ModuleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Class.ClassName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegistrationCode)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { classid = item.ClassID, moduleid = item.ModuleID, trainerid = item.TrainerID }) |
+
+                        @Html.ActionLink("Delete", "Delete", new { classid = item.ClassID, moduleid = item.ModuleID, trainerid = item.TrainerID })
+                    </td>
+                </tr>
+                ++count;
+            }
+        </tbody>
+    </table>
+</body>
+<script language="JavaScript" type="text/javascript" src="/css/searchbar/SearchSuggest.js"></script>

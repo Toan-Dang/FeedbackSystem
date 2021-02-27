@@ -1,0 +1,82 @@
+﻿@model IEnumerable<FS.Areas.Admin.Models.Module>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedbacks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeedbackStartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeedbackEndTime)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModuleID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModuleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdminID.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+
+                <td>
+                    @Html.Raw(string.Join("<br>", item.Feedbacks.Title))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedbackStartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedbackEndTime)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ModuleID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ModuleID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ModuleID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

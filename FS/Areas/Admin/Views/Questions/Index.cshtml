@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FS.Areas.Admin.Models.Question>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="row">
+    @Html.DisplayNameFor(model => model.Topic.TopicName):
+    <hr />
+    <select class="form-control" asp-items="ViewBag.TopicID"></select>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Topic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Topic.TopicName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionContent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Topic.TopicID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Topic.TopicName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionContent)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.QuestionID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.QuestionID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
