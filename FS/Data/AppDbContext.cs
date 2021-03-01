@@ -22,6 +22,7 @@ namespace FS.Data {
         public DbSet<Question> Questions { set; get; }
         public DbSet<Topic> Topics { set; get; }
         public DbSet<Feedback_Question> Feedback_Questions { set; get; }
+        public DbSet<Enrollment> Enrollments { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {
         }
@@ -39,6 +40,7 @@ namespace FS.Data {
             }
             builder.Entity<Assignment>().HasKey(p => new { p.ClassID, p.ModuleID, p.TrainerID });
             builder.Entity<Feedback_Question>().HasKey(p => new { p.FeedbackID, p.QuestionID });
+            builder.Entity<Enrollment>().HasKey(p => new { p.ClassID, p.TraineeID });
         }
 
         //public DbSet<Module> Module { set; get; }
@@ -54,5 +56,6 @@ namespace FS.Data {
         public DbSet<FS.Areas.Admin.Models.Feedback_Question> Feedback_Question { get; set; }
         public DbSet<FS.Areas.Admin.Models.Topic> Topic { get; set; }
         public DbSet<FS.Areas.Admin.Models.Question> Question { get; set; }
+        public DbSet<FS.Areas.Admin.Models.Enrollment> Enrollment { get; set; }
     }
 }

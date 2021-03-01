@@ -16,5 +16,7 @@ namespace FS.Areas.Admin.Models {
         public DateTime? StartTime { get; set; }
         public DateTime? EndTime { get; set; }
         public bool IsDeleted { get; set; }
+
+        public List<Enrollment> Enrollments { get; set; }
     }
 }

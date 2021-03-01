@@ -547,3 +547,8 @@ D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Feedbacks\Delet
 D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Feedbacks\Details.cshtml.g.cs
 D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Feedbacks\Edit.cshtml.g.cs
 D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Feedbacks\Index.cshtml.g.cs
+D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Enrollments\Create.cshtml.g.cs
+D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Enrollments\Delete.cshtml.g.cs
+D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Enrollments\Details.cshtml.g.cs
+D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Enrollments\Edit.cshtml.g.cs
+D:\C#\FeedbackSystem\FS\obj\Debug\net5.0\Razor\Areas\Admin\Views\Enrollments\Index.cshtml.g.cs

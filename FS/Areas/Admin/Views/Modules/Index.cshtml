@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Module List</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -73,7 +73,7 @@
 
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.ModuleID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ModuleID">Details</a> |
+                    |
                     <a asp-action="Delete" asp-route-id="@item.ModuleID">Delete</a>
                 </td>
             </tr>

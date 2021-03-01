@@ -1,0 +1,61 @@
+﻿@model IEnumerable<FS.Areas.Admin.Models.Enrollment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Enrollment List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="row">
+    @Html.DisplayNameFor(model => model.Class.ClassName):
+    <hr />
+    <select class="form-control" asp-items="ViewBag.ClassID"></select>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                TraineeID
+            </th>
+            <th>
+                TraineeName
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class.ClassID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class.ClassName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainerID.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainerID.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class.ClassID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class.ClassName)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { classid = item.ClassID, traineeid = item.TraineeID }) |
+                    @Html.ActionLink("Details", "Details", new { classid = item.ClassID, traineeid = item.TraineeID }) |
+                    @Html.ActionLink("Delete", "Delete", new { classid = item.ClassID, traineeid = item.TraineeID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

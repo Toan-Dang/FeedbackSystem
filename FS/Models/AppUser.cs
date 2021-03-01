@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using FS.Areas.Admin.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,5 +27,7 @@ namespace FS.Models {
 
         [MaxLength(50)]
         public string Role { set; get; }
+
+        public List<Enrollment> Enrollments { get; set; }
     }
 }
